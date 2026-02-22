@@ -64,10 +64,10 @@ def build_model_data():
     df['difficulty_label'] = df['difficulty_score'].apply(categorize)
     
     # Columns to keep (Clean and Join)
-    cols = ['Id', 'Score', 'Title', 'max_answer_score', 'avg_answer_score', 
+    cols = ['Id', 'Score', 'Title', 'Body', 'max_answer_score', 'avg_answer_score', 
             'answer_score_variance', 'answer_count', 'ratio', 'difficulty_score', 'difficulty_label']
     
-    df_final = df[cols].rename(columns={'Score': 'question_score'})
+    df_final = df[cols].rename(columns={'Score': 'question_score', 'Body': 'question_body'})
     
     print(f"Saving processed data to {processed_path}...")
     df_final.to_csv(os.path.join(processed_path, 'processed_questions.csv'), index=False)
