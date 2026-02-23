@@ -23,6 +23,7 @@ The system processes raw question data, performs feature engineering, trains a c
 ExamWise/
 │
 ├── app.py # Streamlit application
+│
 ├── scripts/
 │ ├── data_reduction.py # Dataset filtering & reduction
 │ └── feature_engineering.py # Feature creation pipeline
@@ -38,7 +39,9 @@ ExamWise/
 │ └── processed/ # Processed datasets (ignored in Git)
 │
 ├── outputs/ # Generated visualizations
+│
 ├── docs/ # Documentation
+│
 ├── requirements.txt
 └── README.md
 
