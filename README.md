@@ -20,29 +20,31 @@ The system processes raw question data, performs feature engineering, trains a c
 ---
 
 ## 🏗️ Project Structure
-ExamWise/
+
+```bash
+ExamWise
 │
-├── app.py # Streamlit application
+├── app.py                        # Streamlit application entry point
 │
-├── scripts/
-│ ├── data_reduction.py # Dataset filtering & reduction
-│ └── feature_engineering.py # Feature creation pipeline
+├── scripts/                      # Data processing & pipeline logic
+│   ├── data_reduction.py         # Dataset filtering and reduction
+│   └── feature_engineering.py    # Feature creation & difficulty scoring
 │
-├── models/
-│ ├── model.joblib
-│ ├── vectorizer.joblib
-│ └── metrics.txt
+├── models/                       # Trained ML artifacts
+│   ├── model.joblib
+│   ├── vectorizer.joblib
+│   └── metrics.txt
 │
-├── data/
-│ ├── raw/ # Uploaded datasets (ignored in Git)
-│ ├── reduced/ # Reduced datasets (ignored in Git)
-│ └── processed/ # Processed datasets (ignored in Git)
+├── data/                         # Data directories (ignored in Git)
+│   ├── raw/                      # Uploaded datasets
+│   ├── reduced/                  # Reduced datasets
+│   └── processed/                # Processed datasets
 │
-├── outputs/ # Generated visualizations
+├── outputs/                      # Generated visualizations & analysis
 │
-├── docs/ # Documentation
+├── docs/                         # Project documentation
 │
-├── requirements.txt
+├── requirements.txt              # Project dependencies
 └── README.md
 
 
